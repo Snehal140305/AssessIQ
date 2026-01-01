@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AssessIQ </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="dashboard">
+  <div class="overlay">
+    <h1><i>AssessIQ - Placement Preparation Platform</i></h1>
+    <p>Select Your Assessment Category</p>
+
+    <div class="card-grid">
+      <div class="card" onclick="showSets('quant')">
+        Quantitative Aptitude
+      </div>
+
+      <div class="card" onclick="showSets('logical')">
+        Logical Reasoning
+      </div>
+
+      <div class="card" onclick="showSets('verbal')">
+        Verbal Ability
+      </div>
+
+      <div class="card" onclick="showSets('technical')">
+        Technical Basics
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="set-box" class="hidden">
+  <div class="set-header">
+    <button id="backToDashboard">← Back</button>
+    <h3>Select Set</h3>
+  </div>
+  <div id="set-list"></div>
+</div>
+
+
+
+
+<div id="quiz-container" class="hidden">
+  <h2 id="section-title"></h2>
+  <p id="timer">Time: <span id="time-left">20</span>s</p>
+  <div class="progress-bar"><div id="progress"></div></div>
+  <p id="question"></p>
+  <div id="options"></div>
+</div>
+
+<div id="result-box" class="hidden">
+  <h2>Result</h2>
+  <p>Correct: <span id="correct"></span></p>
+  <p>Wrong: <span id="wrong"></span></p>
+  <p>Accuracy: <span id="accuracy"></span>%</p>
+  <button onclick="location.reload()">Go Home</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

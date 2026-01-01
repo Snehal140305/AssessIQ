@@ -1,0 +1,149 @@
+body{
+  margin:0;
+  font-family:Segoe UI, sans-serif;
+  background:url("bg-img.jpg") no-repeat center center/cover;
+  height:100vh;
+}
+
+/* Dark overlay full screen */
+#dashboard{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:rgba(0,0,0,0.65);
+}
+
+/* White glass panel */
+.overlay{
+  background:rgba(255,255,255,0.12);
+  padding:40px 50px;
+  border-radius:20px;
+  width:520px;
+  text-align:center;
+  backdrop-filter:blur(10px);
+  box-shadow:0 15px 40px rgba(0,0,0,0.4);
+}
+
+.overlay h1{
+  font-size:30px;
+  font-weight:700;
+  color:#ffffff;
+}
+
+.overlay p{
+  margin-top:6px;
+  color:#cfd8dc;
+}
+
+/* Cards Grid */
+.card-grid{
+  margin-top:35px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.card{
+  height:110px;
+  border-radius:14px;
+  background:linear-gradient(135deg,#00c6ff,#0072ff);
+  color:#ffffff;
+  font-size:16px;
+  font-weight:600;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  cursor:pointer;
+  box-shadow:0 8px 18px rgba(0,114,255,0.6);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px) scale(1.05);
+  box-shadow:0 14px 30px rgba(0,198,255,0.9);
+}
+
+/* Quiz Box */
+#quiz-container,#set-box,#result-box{
+  background:#ffffff;
+  width:420px;
+  padding:30px;
+  border-radius:18px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  text-align:center;
+  color:#003344;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+
+.hidden{display:none;}
+
+#timer{font-weight:600;color:#555;}
+
+#question{font-size:18px;font-weight:600;color:#003344;margin:15px 0;}
+
+.option{
+  background:#f4f6f7;
+  padding:10px;
+  margin-top:8px;
+  border-radius:8px;
+  cursor:pointer;
+  border:1px solid #ccc;
+  transition:0.2s;
+}
+
+.option:hover{background:#dff3ff;}
+
+.progress-bar{
+  height:8px;
+  background:#ddd;
+  border-radius:10px;
+  overflow:hidden;
+}
+
+#progress{height:100%;width:0;background:#4CAF50;}
+.set-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:20px;
+}
+
+#backToDashboard{
+  background:linear-gradient(135deg,#00c6ff,#0072ff);
+  color:white;
+  border:none;
+  padding:8px 15px;
+  border-radius:6px;
+  cursor:pointer;
+  font-size:14px;
+  box-shadow:0 4px 10px rgba(0,114,255,0.6);
+}
+
+#backToDashboard:hover{
+  transform:scale(1.05);
+  box-shadow:0 6px 14px rgba(0,198,255,0.9);
+}
+
+
+
+
+@media (max-width: 600px){
+
+  .overlay{
+    width:90%;
+    padding:30px 20px;
+  }
+
+  .card-grid{
+    grid-template-columns:1fr;
+  }
+
+  .card{
+    height:90px;
+    font-size:15px;
+  }
+}
