@@ -29,4 +29,4 @@ JavaScript (DOM manipulation & localStorage)
 
 🌐 Live Demo
 
-Add your GitHub Pages link here.
+https://snehal140305.github.io/AssessIQ/
